@@ -1,0 +1,21 @@
+{
+  "name": "pizarra-flotante",
+  "version": "0.1.0",
+  "description": "Pizarra flotante transparente para anotar sobre la pantalla (Windows 11)",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win --publish never"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.tuusuario.pizarraflotante",
+    "productName": "Pizarra Flotante",
+    "files": ["src/**/*", "package.json"],
+    "win": { "target": "nsis" },
+    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true }
+  }
+}
